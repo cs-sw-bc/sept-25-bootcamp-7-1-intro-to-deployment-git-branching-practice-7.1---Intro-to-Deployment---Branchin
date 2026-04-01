@@ -85,7 +85,7 @@ app.get("/api/books/:id", (req, res) => {
 });
 
 app.get("/api/books/:id/reviews", async (req, res) => {
-  await sleep(3000);
+  
   const bookReviews = reviews[parseInt(req.params.id)] || [];
   res.json(bookReviews);
 });
